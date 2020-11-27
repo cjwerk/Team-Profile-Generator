@@ -36,9 +36,9 @@ function newEmployee() {
     },
     ])
         .then(function ({ name, role, id, email }) {
-            let roleInfo = "",
+            let roleInfo = "";
             if (role === "Engineer") {
-                roleInfo = "Github username";
+                roleInfo = "GitHub username";
             } else if (role === 'Intern') {
                 roleInfo = 'school name'
             } else {
@@ -79,3 +79,4 @@ function newEmployee() {
                 });
         });
 }
+initApp();
