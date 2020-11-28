@@ -15,7 +15,7 @@ function initApp() {
 function newEmployee() {
     inquirer.prompt([{
         message: 'Enter team members name',
-        name: name,
+        name: 'name',
     },
     {
         type: "list",
@@ -154,7 +154,23 @@ function addHtml(member) {
             if(err) {
                 return reject(err);
             };
-            return resolve;
+            return resolve();
         });
     });
 };
+
+function finishHtml() {
+    const html = `</div>
+    </div>
+    
+</body>
+</html>`
+fs.appendFile("./output/team.html", html, function(err) {
+    if(err) {
+        console.log(err);
+    }
+})
+console.log('end');
+};
+
+initApp();
