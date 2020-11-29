@@ -65,7 +65,7 @@ function newEmployee() {
                         newMember = new Intern(name, id, email, roleInfo);
                     } else {
                         newMember = new Manager(name, id, email, roleInfo);
-                    } 
+                    }
                     employees.push(newMember);
                     addHtml(newMember)
                         .then(function () {
@@ -117,8 +117,8 @@ function addHtml(member) {
             <h5 class="card-header">${name}<br /><br />Engineer</h5>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: ${id}</li>
-                <li class="list-group-item">Email Address: ${email}</li>
-                <li class="list-group-item">GitHub: ${gitHub}</li>
+                <li class="list-group-item">Email Address:<a href= "mailto:${email}" target="_blank">${email}</a></li>
+                <li class="list-group-item">GitHub:<a href="https://github.com/${gitHub}"target="_blank">${gitHub}</a></li>
             </ul>
             </div>
         </div>`;
@@ -129,7 +129,7 @@ function addHtml(member) {
             <h5 class="card-header">${name}<br /><br />Intern</h5>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: ${id}</li>
-                <li class="list-group-item">Email Address: ${email}</li>
+                <li class="list-group-item">Email Address:<a href= "mailto:${email}" target="_blank">${email}</a></li>
                 <li class="list-group-item">School: ${school}</li>
             </ul>
             </div>
@@ -141,7 +141,7 @@ function addHtml(member) {
             <h5 class="card-header">${name}<br /><br />Manager</h5>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: ${id}</li>
-                <li class="list-group-item">Email Address: ${email}</li>
+                <li class="list-group-item">Email Address:<a href= "mailto:${email}" target="_blank">${email}</a></li>
                 <li class="list-group-item">Office Phone: ${officePhone}</li>
             </ul>
             </div>
