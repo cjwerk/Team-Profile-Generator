@@ -3,7 +3,6 @@ const fs = require("fs");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 const Manager = require("./lib/Manager");
-const { type } = require("os");
 
 const employees = [];
 
@@ -33,7 +32,7 @@ function newEmployee() {
     },
     {
         message: 'Please enter employees email',
-        name: 'Email'
+        name: 'email'
     },
     ])
         .then(function ({ name, role, id, email }) {
@@ -66,7 +65,7 @@ function newEmployee() {
                         newMember = new Intern(name, id, email, roleInfo);
                     } else {
                         newMember = new Manager(name, id, email, roleInfo);
-                    }
+                    } 
                     employees.push(newMember);
                     addHtml(newMember)
                         .then(function () {
